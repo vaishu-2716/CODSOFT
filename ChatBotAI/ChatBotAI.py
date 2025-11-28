@@ -64,7 +64,7 @@ class LocalChatbotGUI:
                            bg="#1f2c34")
         heading.pack(pady=8)
 
-        # Chat Area
+
         self.chat_box = scrolledtext.ScrolledText(
             self.window, wrap=tk.WORD, state="disabled",
             font=("Segoe UI", 11),
@@ -73,7 +73,6 @@ class LocalChatbotGUI:
         )
         self.chat_box.pack(expand=True, fill="both", padx=8, pady=8)
 
-        # Input Frame
         input_frame = tk.Frame(self.window, bg="#1f2c34")
         input_frame.pack(pady=4, fill="x")
 
@@ -107,7 +106,6 @@ class LocalChatbotGUI:
     def add_message_bubble(self, message, is_user=True):
         self.chat_box.configure(state="normal")
 
-        # bubble container
         frame = tk.Frame(self.chat_box, bg="#121b22")
 
         bubble_bg = "#005c4b" if is_user else "#202c33"
@@ -117,7 +115,7 @@ class LocalChatbotGUI:
             padx=10, pady=6, justify="left",
             font=("Segoe UI", 11), anchor="w"
         )
-        # Align right for user, left for AI
+       
         bubble.pack(anchor="e" if is_user else "w", pady=3, padx=6)
         frame.pack(anchor="e" if is_user else "w", fill="x")
 

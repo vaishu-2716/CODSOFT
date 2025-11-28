@@ -11,7 +11,6 @@ class FaceDetectionApp:
         self.window.geometry("1000x700")
         self.window.configure(bg="#1a1a1a")
 
-        # Title
         heading = tk.Label(self.window,
                            text="FACE DETECTION",
                            font=("Arial", 28, "bold"),
@@ -19,7 +18,6 @@ class FaceDetectionApp:
                            bg="#1a1a1a")
         heading.pack(pady=20)
 
-        # Load Haar Cascade
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
         )
@@ -41,7 +39,6 @@ class FaceDetectionApp:
         self.cap = None
         self.running = False
 
-    # Resize keeping aspect ratio to 50% of window
     def resize_for_display(self, frame):
         win_w = int(self.window.winfo_width() * 0.5)
         win_h = int(self.window.winfo_height() * 0.5)
