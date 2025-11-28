@@ -1,0 +1,8 @@
+tkinterdnd2
+accelerate==0.33.0
+requests
+opencv-python
+pillow
+torch>=2.2.0
+transformers>=4.38.0
+bitsandbytes>=0.41.0
